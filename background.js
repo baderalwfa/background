@@ -24,7 +24,6 @@ chrome.omnibox.onInputEntered.addListener(
     navigate(text);
   });
 
-
 function navigate(url) {
   chrome.tabs.getSelected(null, function(tab) {
     chrome.tabs.update(tab.id, {url: url});
